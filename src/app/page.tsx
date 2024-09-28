@@ -1,3 +1,11 @@
 export default function Home() {
-  return <main className="flex min-h-screen gap-6 p-24">ㅇㅇ</main>;
+  return (
+    <main className="min-h-screen">
+      <div>안녕안녕안녕</div>
+      <div>안녕안녕안녕</div>
+      <div>안녕안녕안녕</div>
+      <div>안녕안녕안녕</div>
+      <div>안녕안녕안녕</div>
+    </main>
+  );
 }

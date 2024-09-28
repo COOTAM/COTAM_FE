@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: '코탐 소개',
+    title: '소개',
   };
 }
 

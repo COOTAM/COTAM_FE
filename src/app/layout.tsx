@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 
+import Header from './_components/Header';
+import Footer from './_components/Footer';
+
 const galmuri = localFont({
   src: [
     {
@@ -35,7 +38,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={galmuri.variable}>{children}</body>
+      <body className={galmuri.variable}>
+        <div className="relative bg-cotam-blue-100 flex-col-center">
+          <Header />
+          {children}
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
