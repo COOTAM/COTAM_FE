@@ -19,7 +19,7 @@ const Accordion = ({ questionText, answerText }: Props) => {
   return (
     <div className="relative box-border flex w-full flex-col rounded-[12px] bg-white p-3">
       <div className="items-top flex flex-row gap-2">
-        <div className="min-w-fit text-cotam-red-60 galmuri11-body-2-bold">Q .</div>
+        <div className="min-w-fit text-cotam-red-60 galmuri11-body-2-bold">Q.</div>
         <div className="w-[210px] text-cotam-gray-95 pretandard-subtitle-2 md:w-full">
           {questionText}
         </div>
@@ -31,7 +31,7 @@ const Accordion = ({ questionText, answerText }: Props) => {
         }`}>
         <div className="my-[12px] h-[1px] w-full bg-cotam-gray-10" />
         <div className="items-top flex flex-row gap-2">
-          <div className="min-w-fit font-bold text-cotam-blue-50 galmuri11-body-2-bold">A .</div>
+          <div className="min-w-fit font-bold text-cotam-blue-50 galmuri11-body-2-bold">A.</div>
           <div className="w-[210px] text-cotam-gray-80 pretandard-body-3 md:w-full">
             {answerText}
           </div>
