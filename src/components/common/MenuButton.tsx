@@ -11,12 +11,12 @@ interface MenuButtonProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const MenuButton = ({ className, pathname, ...props }: MenuButtonProps) => {
-  const [isOpen, toggle] = useReducer((prev) => !prev, false);
+  const [isOpen, toggleIsOpen] = useReducer((prev) => !prev, false);
 
   return (
     <div {...props} className={className}>
-      <Hamburger className="h-6 w-6 cursor-pointer" onClick={toggle} />
-      <MenuDrawer isOpen={isOpen} onClose={toggle} pathname={pathname} />
+      <Hamburger className="h-6 w-6 cursor-pointer" onClick={toggleIsOpen} />
+      <MenuDrawer isOpen={isOpen} onClose={toggleIsOpen} pathname={pathname} />
     </div>
   );
 };
