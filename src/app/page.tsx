@@ -1,9 +1,16 @@
+import Accordion from '@/components/common/Accordion';
 import ArrowUpBlue from '../../public/assets/icons/ArrowUpBlue.svg';
 import WarningBlue from '../../public/assets/icons/WarningBlue.svg';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen gap-6 p-24">
+      <div>
+        <Accordion
+          questionText="Lorem ipsum dolor sit amet consectetur. Metus sagittis ut est sed nisl maecenas."
+          answerText="Lorem ipsum dolor sit amet consectetur. Metus sagittis ut est sed nisl maecenas."
+        />
+      </div>
       <div>
         <h2>Pretendard Typography</h2>
         <div className="flex gap-3">
