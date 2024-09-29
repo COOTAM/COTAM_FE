@@ -18,7 +18,10 @@ interface MenuItemProps extends React.HTMLAttributes<HTMLDivElement> {
 const MenuDrawer = ({ isOpen, onClose, pathname }: MenuDrawerProps) => {
   return (
     <ul
-      className={`fixed right-0 top-0 z-50 h-screen w-full bg-[#08072D80] shadow-lg transition-transform duration-300 ease-in-out backdrop-blur-20px lg:w-[30vw] ${
+className={cn(
+        'fixed right-0 top-0 z-50 h-dvh w-full bg-[#08072D80] backdrop-blur-[20px] transition-transform duration-300 ease-in-out lg:w-[30vw]',
+        isOpen ? 'translate-x-0' : 'translate-x-full',
+      )}
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
       <MenuItem className="justify-end" text="X" onClick={onClose} />
