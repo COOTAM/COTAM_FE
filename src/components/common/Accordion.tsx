@@ -39,8 +39,8 @@ const Accordion = ({ questionText, answerText }: Props) => {
       </div>
 
       <span
-        className={`absolute bottom-[12px] right-[12px] w-fit cursor-pointer text-cotam-red-60 transition-transform duration-300 ${
-          isOpen ? 'rotate-180 text-cotam-blue-50' : ''
+        className={`absolute bottom-[12px] right-[12px] w-fit cursor-pointer transition-transform duration-300 ${
+          isOpen ? 'rotate-180 text-cotam-blue-50' : 'text-cotam-red-60'
         }`}
         onClick={handleClick}>
         ▾
