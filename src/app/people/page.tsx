@@ -35,7 +35,7 @@ export default function People() {
 
               {item.position !== 'user' && (
                 <span className="box-border rounded bg-cotam-blue-40 px-1 text-white">
-                  {positionMap[item.position as keyof typeof positionMap]}
+                  {positionMap[item.position]}
                 </span>
               )}
             </section>

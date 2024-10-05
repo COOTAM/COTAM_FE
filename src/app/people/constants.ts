@@ -36,7 +36,7 @@ export const playerList = [
     job: 'Front-End',
     description: '제인입니다',
   },
-];
+] as const;
 
 export const positionMap = {
   leader: '스터디장',
