@@ -1,5 +1,7 @@
 'use client';
 
+import { ZIndex } from '@/constants/ui';
+
 const Cotam = () => {
   // const [isScrollVisible, setIsScrollVisible] = useState(false);
 
@@ -17,7 +19,21 @@ const Cotam = () => {
   // const endOfScrollRef = useIntersect(onIntersect);
 
   return (
-    <div className="bg-red-300">
+    <div
+      className={`sticky top-0 inline-block h-[100dvh] w-full text-white ${ZIndex.home.firstLayer}`}>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem iste harum similique
+      necessitatibus architecto libero. Fugit explicabo deserunt, harum animi numquam quisquam
+      repellat minus, ea et sequi ex nihil temporibus. Lorem ipsum dolor sit amet consectetur,
+      adipisicing elit. Rem iste harum similique necessitatibus architecto libero. Fugit explicabo
+      deserunt, harum animi numquam quisquam repellat minus, ea et sequi ex nihil temporibus. Lorem
+      ipsum dolor sit amet consectetur, adipisicing elit. Rem iste harum similique necessitatibus
+      architecto libero. Fugit explicabo deserunt, harum animi numquam quisquam repellat minus, ea
+      et sequi ex nihil temporibus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem
+      iste harum similique necessitatibus architecto libero. Fugit explicabo deserunt, harum animi
+      numquam quisquam repellat minus, ea et sequi ex nihil temporibus. Lorem ipsum dolor sit amet
+      consectetur, adipisicing elit. Rem iste harum similique necessitatibus architecto libero.
+      Fugit explicabo deserunt, harum animi numquam quisquam repellat minus, ea et sequi ex nihil
+      temporibus.
       {/* <div
         className={cn('h-[100dvh] w-full text-white', isScrollVisible ? 'fixed left-0 top-0' : '')}>
         이것들

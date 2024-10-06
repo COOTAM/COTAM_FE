@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import ImageBox from './ImageBox';
 import LinkButton from './LinkButton';
+import BorderTop from '@/components/common/BorderTop';
+import { ZIndex } from '@/constants/ui';
 
 interface DescriptionBoxProps {
   icon: string;
@@ -27,7 +29,9 @@ const AboutCotam = () => {
     },
   ];
   return (
-    <section className="h-full pb-[60px] pt-20">
+    <section
+      className={`relative h-full bg-cotam-blue-100 pb-[60px] pt-20 ${ZIndex.home.secondLayer}`}>
+      <BorderTop />
       <p className="mb-5 text-cotam-red-60 galmuri11-headline-1">코탐은?</p>
       <p className="mb-20 whitespace-pre-wrap text-cotam-blue-10 pretandard-body-1">
         {

@@ -1,13 +1,11 @@
 'use client';
 
-import { cn } from '@/lib/utils';
-
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-
-import Cotam from '../../../public/assets/logo/Cotam.svg';
 import MenuButton from '@/components/common/MenuButton';
 import { ROUTES } from '@/constants/routes';
+import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import Cotam from '../../../public/assets/logo/Cotam.svg';
 
 const Header = () => {
   const pathname = usePathname();
@@ -16,7 +14,7 @@ const Header = () => {
     <header className="sticky top-0 z-40 flex h-14 w-full items-center justify-between px-10 backdrop-blur-[50px] lg:h-[60px] lg:justify-start lg:gap-[60px] lg:px-[calc((100%-1024px)/2+40px)]">
       <Link href={ROUTES.HOME.PATH}>
         <Cotam className="h-[18px] w-20 cursor-pointer text-cotam-red-60" />
-      </a>
+      </Link>
 
       {/* 데스크톱 메뉴 (lg 이상에서만 표시) */}
       <ul className="hidden items-center gap-[60px] text-white pretandard-subtitle-1 lg:flex">
