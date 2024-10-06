@@ -75,19 +75,19 @@ const TabAbout = () => {
 
       {selectedTab === 1 && (
         <div>
-          <section className="mt-[30px] flex w-full flex-col gap-y-6">
-            <h2 className="text-white galmuri11-headline-3">
-              스터디 이외에도 여러가지 활동을 해요
+          <section className="flex w-full flex-col gap-y-10">
+            <h2 className="whitespace-pre-line text-white galmuri11-headline-3">
+              {`스터디 이외에도\n여러가지 활동을 해요`}
             </h2>
-            <section className="flex w-full flex-row flex-wrap gap-x-2 gap-y-2">
+            <ul className="flex w-full flex-row flex-wrap gap-x-2 gap-y-2">
               {activityList.map((item, index) => (
-                <span
+                <li
                   key={index}
                   className="box-border w-fit rounded-[10px] bg-cotam-blue-90 px-3 py-2 text-white galmuri11-body-1">
                   {item}
-                </span>
+                </li>
               ))}
-            </section>
+            </ul>
           </section>
         </div>
       )}
