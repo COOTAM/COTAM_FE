@@ -15,26 +15,31 @@ const CotamPeople = () => {
       icon: <Desktop className={'size-4'} />,
       label: '개발을 좋아해요',
       backgroundColor: 'bg-cotam-blue-90',
+      delay: 1000,
     },
     {
       icon: <Hand className={'size-4'} />,
       label: 'IT 업계분들과 교류하고 싶어요',
       backgroundColor: 'bg-cotam-blue-80',
+      delay: 1500,
     },
     {
       icon: <ArrowUp className={'size-4'} />,
       label: '성장하고 싶어요',
       backgroundColor: 'bg-cotam-blue-70',
+      delay: 2000,
     },
     {
       icon: <Scroll className={'size-4'} />,
       label: '생산적인 주말을 보내고 싶어요',
       backgroundColor: 'bg-cotam-blue-50',
+      delay: 2500,
     },
     {
       icon: <Target className={'size-4'} />,
       label: '목표를 달성하고 싶어요',
       backgroundColor: 'bg-cotam-blue-40',
+      delay: 3000,
     },
   ];
   return (
@@ -43,7 +48,7 @@ const CotamPeople = () => {
       <p className="break-keep text-white galmuri11-headline-1">이런 사람들과 함께하고 있어요.</p>
       <ul className="flex flex-col flex-wrap gap-3 sm:flex-row">
         {TopMoveBoxList.map((topMoveBox) => (
-          <TopMoveBox key={topMoveBox.label} {...topMoveBox} />
+          <TopMoveBox delay={400} key={topMoveBox.label} {...topMoveBox} />
         ))}
       </ul>
       <div className="flex gap-3 rounded-xl bg-cotam-blue-95 p-5">

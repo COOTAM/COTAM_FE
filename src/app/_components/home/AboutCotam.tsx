@@ -16,7 +16,7 @@ const AboutCotam = () => {
     {
       icon: '/assets/image/Pixel16-Book.png',
       title: 'SCORE',
-      count: 40,
+      count: 48,
       // 추후 스터디횟수 종합하는 API로 횟수 대체하기
       description: '지금까지 48번의 스터디를 진행했어요!',
     },

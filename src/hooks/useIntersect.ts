@@ -16,6 +16,7 @@ const useIntersect = (onIntersect: IntersectHandler, options?: IntersectionObser
 
   useEffect(() => {
     if (!ref.current) return;
+    if (typeof window === undefined) return;
     const observer = new IntersectionObserver(callback, options);
     observer.observe(ref.current);
     return () => observer.disconnect();
