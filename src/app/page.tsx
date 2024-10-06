@@ -16,7 +16,9 @@ export default function Home() {
   return (
     <main className="h-full w-full max-w-[1024px] px-10">
       <Introduce />
-      <Cotam />
+      <div className="sticky top-0 h-[400dvh]">
+        <Cotam />
+      </div>
       <AboutCotam />
       <div className="sticky top-0" ref={ref}>
         {isVisible && <CotamPeople />}
