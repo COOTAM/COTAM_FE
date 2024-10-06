@@ -34,7 +34,7 @@ const AboutCotam = () => {
           '2024년 활동 시작 이후로\n다양한 연차의 개발자,\n디자이너가 함께하고 있는\nIT 자기계발 스터디 모임입니다.'
         }
       </p>
-      <ul className="mb-20 flex flex-col gap-5">
+      <ul className="mb-20 flex flex-col gap-5 sm:flex-row">
         {DescriptionList.map((description) => (
           <DescriptionBox key={description.description} {...description} />
         ))}
@@ -43,7 +43,7 @@ const AboutCotam = () => {
         <p className="whitespace-pre-wrap text-white galmuri11-subtitle-1">
           {'스터디 뿐만 아니라\n다양한 활동도 함께해요'}
         </p>
-        <div className="mb-9 flex flex-row gap-5 sm:flex-col">
+        <div className="mb-9 flex flex-col gap-5 sm:flex-row">
           <ImageBox />
           <ImageBox />
         </div>
@@ -57,7 +57,7 @@ export default AboutCotam;
 
 const DescriptionBox = ({ icon, title, count, description }: DescriptionBoxProps) => {
   return (
-    <li className="flex flex-col gap-2 rounded-xl bg-cotam-blue-95 p-5">
+    <li className="flex w-full flex-col gap-2 rounded-xl bg-cotam-blue-95 p-5">
       <div className="flex gap-2 galmuri11-headline-3">
         <Image src={icon} width={32} height={32} alt="descriptionIcon" />
         <p className="flex-grow text-cotam-blue-50">{title}</p>

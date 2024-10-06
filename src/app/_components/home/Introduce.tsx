@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import ArrowDown from '../../../../public/assets/icons/ArrowUpRed.svg';
+import ArrowDown from '../../../../public/assets/icons/ArrowUpBlue.svg';
 import WithCotamButton from '../WithCotamButton';
 
 const Introduce = () => {

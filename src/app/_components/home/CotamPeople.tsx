@@ -39,7 +39,7 @@ const CotamPeople = () => {
   return (
     <section className="flex flex-col gap-9 py-[60px]">
       <p className="break-keep text-white galmuri11-headline-1">이런 사람들과 함께하고 있어요.</p>
-      <ul className="flex flex-col gap-3">
+      <ul className="flex flex-col flex-wrap gap-3 sm:flex-row">
         {TopMoveBoxList.map((topMoveBox) => (
           <TopMoveBox key={topMoveBox.label} {...topMoveBox} />
         ))}
@@ -48,12 +48,12 @@ const CotamPeople = () => {
         <Bang className="mt-[5px] h-4 w-[18px] leading-7" />
         <div className="flex flex-col gap-4 text-white">
           <p className="galmuri11-subtitle-1">하나라도 해당하시나요?</p>
-          <p className="galmuri11-body-1">
+          <p className="text-cotam-blue-10 galmuri11-body-1">
             자유롭고 편안한 분위기 속에서 즐겁게 성장하고자한다면 코탐과 함께해요.
           </p>
         </div>
       </div>
-      <LinkButton className="text-cotam-blue-30" href="/people" label="코탐과 함께하는 사람들 ⇨" />
+      <LinkButton className="!text-cotam-blue-30" href="/people" label="코탐과 함께하는 사람들 ⇨" />
     </section>
   );
 };

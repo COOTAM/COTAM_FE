@@ -11,7 +11,7 @@ const FAQ = () => {
       </div>
       <ul className="text-white">제인 작업한거 합치기</ul>
       <div className="flex flex-col gap-3">
-        <p>궁금한 게 더 있으신가요?</p>
+        <p className="text-center text-white galmuri11-body-3">궁금한 게 더 있으신가요?</p>
         <Button variant={'blue'} className="w-full p-0">
           <a target="_blank" className="w-full py-[18px]" href="https://open.kakao.com/o/srJ7wcje">
             카카오톡으로 문의하기
