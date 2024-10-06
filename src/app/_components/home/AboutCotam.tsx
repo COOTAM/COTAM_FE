@@ -1,8 +1,10 @@
-import Image from 'next/image';
-import ImageBox from './ImageBox';
-import LinkButton from './LinkButton';
 import BorderTop from '@/components/common/BorderTop';
 import { ZIndex } from '@/constants/ui';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import CountUp from 'react-countup';
+import ImageBox from './ImageBox';
+import LinkButton from './LinkButton';
 
 interface DescriptionBoxProps {
   icon: string;
@@ -59,15 +61,32 @@ const AboutCotam = () => {
 
 export default AboutCotam;
 
+interface DescriptionBoxProps {
+  icon: string;
+  title: string;
+  count: number;
+  description: string;
+}
+
 const DescriptionBox = ({ icon, title, count, description }: DescriptionBoxProps) => {
+  const [isCSR, setIsCSR] = useState(false);
+
+  useEffect(() => {
+    setIsCSR(true); // 클라이언트에서만 true로 변경
+  }, []);
+
   return (
     <li className="flex w-full flex-col gap-2 rounded-xl bg-cotam-blue-95 p-5">
       <div className="flex gap-2 galmuri11-headline-3">
         <Image src={icon} width={32} height={32} alt="descriptionIcon" />
         <p className="flex-grow text-cotam-blue-50">{title}</p>
-        <p className="text-cotam-red-50">{count}</p>
+        <p className="text-cotam-red-50">
+          <CountUp start={isCSR ? 0 : count} end={count} duration={2} separator="," />
+        </p>
       </div>
       <p className="text-cotam-blue-20 pretandard-body-3">{description}</p>
     </li>
   );
 };
+
+export { DescriptionBox };

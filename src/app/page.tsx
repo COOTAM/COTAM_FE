@@ -18,7 +18,9 @@ export default function Home() {
       <Introduce />
       <Cotam />
       <AboutCotam />
-      <div ref={ref}>{isVisible && <CotamPeople />}</div>
+      <div className="sticky top-0" ref={ref}>
+        {isVisible && <CotamPeople />}
+      </div>
       <div className={`relative h-full bg-cotam-blue-100 ${ZIndex.home.thirdLayer}`}>
         <BorderTop />
         <Closing />
