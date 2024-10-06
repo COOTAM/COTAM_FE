@@ -52,14 +52,6 @@ const GraphicDisplay = () => {
     }
   }, [scrollY]);
 
-  function getScroll() {
-    if (isScrollUp && scrollY) {
-      return `translate-y-[-${10 * currentIndex * 4}px]`;
-    } else {
-      return `translate-y-[${10 * currentIndex * 4}px]`;
-    }
-  }
-
   return (
     <div className="relative galmuri11-headline-3">
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
