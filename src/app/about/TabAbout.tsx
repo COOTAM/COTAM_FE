@@ -23,7 +23,9 @@ const TabAbout = () => {
 
       {selectedTab === 0 && (
         <div className="flex flex-col gap-y-[100px]">
-          <section className="flex w-full items-center justify-between rounded-xl bg-cotam-blue-90 p-5">
+          <section
+            aria-label="현재까지 진행된 스터디 횟수"
+            className="flex w-full items-center justify-between rounded-xl bg-cotam-blue-90 p-5">
             <div className="flex flex-row items-center gap-2">
               <BookRed className="h-8 w-8" />
               <span className="text-cotam-blue-40 galmuri11-body-l">SCORE</span>
@@ -31,7 +33,9 @@ const TabAbout = () => {
             <span className="text-cotam-red-50 galmuri11-headline-3">40</span>
           </section>
 
-          <section className="box-border flex w-full flex-col gap-y-6">
+          <section
+            aria-label="스터디 시간/장소"
+            className="box-border flex w-full flex-col gap-y-6">
             <h2 className="text-white galmuri11-headline-3">정규 스터디</h2>
             <div className="flex flex-col gap-y-3 md:grid md:grid-cols-2 md:gap-x-3">
               <DescriptionCard title="시간" contents="매주 토요일 14시-18시" />
@@ -46,7 +50,9 @@ const TabAbout = () => {
             </div>
           </section>
 
-          <section className="box-border flex w-full flex-col gap-y-6">
+          <section
+            aria-label="스터디 진행 방식"
+            className="box-border flex w-full flex-col gap-y-6">
             <h2 className="text-white galmuri11-headline-3">정규 스터디 진행 방식</h2>
             <ul className="flex flex-col gap-y-8">
               {studyProgressMethodList.map((item, index) => (
@@ -75,7 +81,7 @@ const TabAbout = () => {
 
       {selectedTab === 1 && (
         <div>
-          <section className="flex w-full flex-col gap-y-10">
+          <section aria-label="스터디 외 활동" className="flex w-full flex-col gap-y-10">
             <h2 className="whitespace-pre-line text-white galmuri11-headline-3">
               {`스터디 이외에도\n여러가지 활동을 해요`}
             </h2>
