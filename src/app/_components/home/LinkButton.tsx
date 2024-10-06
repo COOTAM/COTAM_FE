@@ -11,7 +11,7 @@ const LinkButton = ({ href, label, className }: Props) => {
     <div className="flex justify-end">
       <Link
         href={href}
-        className={`cursor-pointer text-cotam-red-60 galmuri11-body-3 ${className}`}>
+        className={`cursor-pointer text-cotam-red-60 transition-opacity duration-200 galmuri11-body-3 hover:opacity-80 active:opacity-80 ${className}`}>
         {label}
       </Link>
     </div>
