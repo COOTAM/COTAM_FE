@@ -15,22 +15,25 @@ export default function Home() {
   const { isVisible: isVisibleCotamPeople, ref: isCotamPeopleRef } = useIsVisible();
 
   return (
-    <main className="h-full w-full max-w-[1024px]">
-      <Introduce />
-      <div className="sticky top-0 h-[400dvh] w-full">
-        <Cotam />
-      </div>
-      <div ref={ref}>
-        <AboutCotam isVisible={isVisible} />
-      </div>
-      <div ref={isCotamPeopleRef} className="sticky top-0">
-        {isVisibleCotamPeople && <CotamPeople />}
-      </div>
-      <div className={`relative h-full bg-cotam-blue-100 ${ZIndex.home.thirdLayer}`}>
-        <BorderTop />
-        <Closing />
-        <FAQ />
-      </div>
-    </main>
+    <div className="flex w-screen justify-center">
+      <div className="absolute top-[100vh] h-screen w-screen rotate-180 bg-pixel-gradient" />
+      <main className="h-full w-full max-w-[1024px]">
+        <Introduce />
+        <div className="sticky top-0 h-[400dvh] w-full">
+          <Cotam />
+        </div>
+        <div ref={ref}>
+          <AboutCotam isVisible={isVisible} />
+        </div>
+        <div ref={isCotamPeopleRef} className="sticky top-0">
+          {isVisibleCotamPeople && <CotamPeople />}
+        </div>
+        <div className={`relative h-full bg-cotam-blue-100 ${ZIndex.home.thirdLayer}`}>
+          <BorderTop />
+          <Closing />
+          <FAQ />
+        </div>
+      </main>
+    </div>
   );
 }
