@@ -41,7 +41,6 @@ const GraphicDisplay = () => {
     const currentIndexHeight = currentIndex * perIndexHeight;
     const absoluteValue = Math.abs(scrollY - currentIndexHeight);
     const scrollRank = Math.floor(absoluteValue / perIndexHeight);
-    console.log(scrollY, perIndexHeight, currentIndex);
     if (absoluteValue > perIndexHeight) {
       // 아래로 스크롱
       if (currentIndexHeight <= scrollY) {
@@ -52,8 +51,6 @@ const GraphicDisplay = () => {
       }
     }
   }, [scrollY]);
-
-  // console.log(scrollY, currentIndex);
 
   function getScroll() {
     if (isScrollUp && scrollY) {

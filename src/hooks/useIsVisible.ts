@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import useIntersect from './useIntersect';
 
-const useIsVisible = () => {
+const useIsVisible = (options?: IntersectionObserverInit) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useIntersect((entry) => {
     if (entry.isIntersecting) {
@@ -11,7 +11,7 @@ const useIsVisible = () => {
     if (!entry.isIntersecting) {
       return setIsVisible(false);
     }
-  });
+  }, options);
 
   return { isVisible, ref };
 };

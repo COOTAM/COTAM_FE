@@ -11,7 +11,10 @@ import FAQ from './_components/home/FAQ';
 import Introduce from './_components/home/Introduce';
 
 export default function Home() {
-  const { isVisible, ref } = useIsVisible();
+  const { isVisible, ref } = useIsVisible({ threshold: 0.5 });
+  const { isVisible: isVisibleCotamPeople, ref: isCotamPeopleRef } = useIsVisible({
+    threshold: 0.2,
+  });
 
   return (
     <main className="h-full w-full max-w-[1024px] px-10">
@@ -19,9 +22,11 @@ export default function Home() {
       <div className="sticky top-0 h-[400dvh]">
         <Cotam />
       </div>
-      <AboutCotam />
-      <div className="sticky top-0" ref={ref}>
-        {isVisible && <CotamPeople />}
+      <div ref={ref}>
+        <AboutCotam isVisible={isVisible} />
+      </div>
+      <div ref={isCotamPeopleRef} className="sticky top-0">
+        {isVisibleCotamPeople && <CotamPeople />}
       </div>
       <div className={`relative h-full bg-cotam-blue-100 ${ZIndex.home.thirdLayer}`}>
         <BorderTop />

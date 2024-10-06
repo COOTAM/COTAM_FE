@@ -13,7 +13,11 @@ interface DescriptionBoxProps {
   description: string;
 }
 
-const AboutCotam = () => {
+interface Props {
+  isVisible: boolean;
+}
+
+const AboutCotam = ({ isVisible }: Props) => {
   const DescriptionList: DescriptionBoxProps[] = [
     {
       icon: '/assets/image/Pixel16-Book.png',
@@ -42,7 +46,7 @@ const AboutCotam = () => {
       </p>
       <ul className="mb-20 flex flex-col gap-5 sm:flex-row">
         {DescriptionList.map((description) => (
-          <DescriptionBox key={description.description} {...description} />
+          <DescriptionBox key={description.description} {...description} isVisible={isVisible} />
         ))}
       </ul>
       <div className="flex flex-col gap-9">
@@ -66,9 +70,10 @@ interface DescriptionBoxProps {
   title: string;
   count: number;
   description: string;
+  isVisible?: boolean;
 }
 
-const DescriptionBox = ({ icon, title, count, description }: DescriptionBoxProps) => {
+const DescriptionBox = ({ icon, title, count, description, isVisible }: DescriptionBoxProps) => {
   const [isCSR, setIsCSR] = useState(false);
 
   useEffect(() => {
@@ -81,7 +86,7 @@ const DescriptionBox = ({ icon, title, count, description }: DescriptionBoxProps
         <Image src={icon} width={32} height={32} alt="descriptionIcon" />
         <p className="flex-grow text-cotam-blue-50">{title}</p>
         <p className="text-cotam-red-50">
-          <CountUp start={isCSR ? 0 : count} end={count} duration={2} separator="," />
+          <CountUp start={isCSR && isVisible ? 0 : count} end={count} duration={2} separator="," />
         </p>
       </div>
       <p className="text-cotam-blue-20 pretandard-body-3">{description}</p>
