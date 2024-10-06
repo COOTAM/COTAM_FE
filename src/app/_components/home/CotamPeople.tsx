@@ -15,31 +15,31 @@ const CotamPeople = () => {
       icon: <Desktop className={'size-4'} />,
       label: '개발을 좋아해요',
       backgroundColor: 'bg-cotam-blue-90',
-      delay: 1000,
+      delay: 500,
     },
     {
       icon: <Hand className={'size-4'} />,
       label: 'IT 업계분들과 교류하고 싶어요',
       backgroundColor: 'bg-cotam-blue-80',
-      delay: 1500,
+      delay: 800,
     },
     {
       icon: <ArrowUp className={'size-4'} />,
       label: '성장하고 싶어요',
       backgroundColor: 'bg-cotam-blue-70',
-      delay: 2000,
+      delay: 1100,
     },
     {
       icon: <Scroll className={'size-4'} />,
       label: '생산적인 주말을 보내고 싶어요',
       backgroundColor: 'bg-cotam-blue-50',
-      delay: 2500,
+      delay: 1400,
     },
     {
       icon: <Target className={'size-4'} />,
       label: '목표를 달성하고 싶어요',
       backgroundColor: 'bg-cotam-blue-40',
-      delay: 3000,
+      delay: 1700,
     },
   ];
   return (
