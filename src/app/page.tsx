@@ -19,7 +19,7 @@ export default function Home() {
       <div className="absolute top-[100vh] h-screen w-screen rotate-180 bg-pixel-gradient" />
       <main className="h-full w-full max-w-[1024px]">
         <Introduce />
-        <div className="sticky top-0 h-[400dvh] w-full">
+        <div className="sticky top-0 h-[330dvh] w-full">
           <Cotam />
         </div>
         <div ref={ref}>
