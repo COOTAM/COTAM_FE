@@ -12,7 +12,7 @@ const PeopleCount = () => {
     <div className="flex items-center justify-between rounded-xl bg-cotam-blue-90 p-5">
       <div className="flex items-center gap-2">
         <HumanRed className="h-8 w-8" />
-        <span className="text-cotam-blue-40 galmuri11-body-l">PLAYER</span>
+        <span className="text-cotam-blue-40 galmuri11-headline-3">PLAYER</span>
       </div>
       <span className="text-cotam-red-50 galmuri11-headline-3">
         <CountUp

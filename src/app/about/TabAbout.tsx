@@ -33,7 +33,7 @@ const TabAbout = () => {
             className="flex w-full items-center justify-between rounded-xl bg-cotam-blue-90 p-5">
             <div className="flex flex-row items-center gap-2">
               <BookRed className="h-8 w-8" />
-              <span className="text-cotam-blue-40 galmuri11-body-l">SCORE</span>
+              <span className="text-cotam-blue-40 galmuri11-headline-3">SCORE</span>
             </div>
             <span className="text-cotam-red-50 galmuri11-headline-3">
               <CountUp

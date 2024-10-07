@@ -25,7 +25,7 @@ interface Props {
 const AboutCotam = ({ isVisible }: Props) => {
   const DescriptionList: DescriptionBoxProps[] = [
     {
-      icon: '/assets/image/Pixel16-Book.png',
+      icon: '/assets/icons/BookRed.svg',
       title: 'SCORE',
       count: TOTAL_STUDY_SESSIONS,
       // 추후 스터디횟수 종합하는 API로 횟수 대체하기
@@ -33,7 +33,7 @@ const AboutCotam = ({ isVisible }: Props) => {
       description: `지금까지 ${TOTAL_STUDY_SESSIONS}번의 스터디를 진행했어요!`,
     },
     {
-      icon: '/assets/image/Pixel16-Human.png',
+      icon: '/assets/icons/HumanRed.svg',
       title: 'PLAYER',
       count: STUDY_MEMBERS_COUNT,
       // 추후 스터디횟수 종합하는 API로 횟수 대체하기
