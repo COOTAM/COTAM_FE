@@ -1,9 +1,8 @@
 import { Metadata } from 'next';
 
+import FAQList from '@/components/FAQList';
 import Button from '@/components/common/Button';
-import FAQAccordion from '@/components/common/FAQAccordion';
 import DescriptionCard from '@/components/common/DescriptionCard';
-import { FAQList } from './constant';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -45,13 +44,7 @@ export default function Recruit() {
       </section>
       <section aria-label="자주 묻는 질문" className="flex flex-col gap-y-6">
         <h2 className="galmuri11-headline-3">자주 묻는 질문</h2>
-        <ul className="flex flex-col gap-y-3">
-          {FAQList.map(({ question, answer }) => (
-            <li key={question}>
-              <FAQAccordion questionText={question} answerText={answer} />
-            </li>
-          ))}
-        </ul>
+        <FAQList />
       </section>
       <section aria-label="문의하기" className="gap-3 flex-col-center">
         <p className="galmuri11-body-3">궁금한게 더 있으신가요?</p>

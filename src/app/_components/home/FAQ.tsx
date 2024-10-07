@@ -1,6 +1,7 @@
 import React from 'react';
 import LinkButton from './LinkButton';
 import Button from '@/components/common/Button';
+import FAQList from '@/components/FAQList';
 
 const FAQ = () => {
   return (
@@ -9,7 +10,7 @@ const FAQ = () => {
         <p className="text-white galmuri11-headline-3">자주 묻는 질문</p>
         <LinkButton className="text-cotam-red-60" href="/recruit" label="더보기 >" />
       </div>
-      <ul className="text-white">제인 작업한거 합치기</ul>
+      <FAQList />
       <div className="flex flex-col gap-3">
         <p className="text-center text-white galmuri11-body-3">궁금한 게 더 있으신가요?</p>
         <Button variant={'blue'} className="w-full p-0">

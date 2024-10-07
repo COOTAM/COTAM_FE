@@ -32,9 +32,9 @@ const FAQAccordion = ({ className, questionText, answerText }: Props) => {
         <div className="my-[12px] h-[1px] w-full bg-cotam-gray-10" />
         <div className="items-top flex flex-row gap-2">
           <span className="min-w-fit font-bold text-cotam-blue-50 galmuri11-body-2-bold">A .</span>
-          <div className="whitespace-pre-line pr-2 text-cotam-gray-80 pretandard-body-3">
+          <p className="whitespace-pre-line pr-2 text-cotam-gray-80 pretandard-body-3">
             {answerText}
-          </div>
+          </p>
         </div>
       </div>
 
