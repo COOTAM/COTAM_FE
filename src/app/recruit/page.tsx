@@ -21,7 +21,7 @@ export default function Recruit() {
             <DescriptionCard
               variant="lightBlue"
               title="모집 기간"
-              contents="2024.10.07 - 2024.10.11"
+              contents="2024.10.08 - 2024.10.11"
               className="flex-1"
             />
             <DescriptionCard

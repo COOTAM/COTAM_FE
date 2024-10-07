@@ -4,14 +4,14 @@ import { useEffect, useState } from 'react';
 
 import BookRed from '../../../public/assets/icons/BookRed.svg';
 
+import CountUp from 'react-countup';
 import Tab from '@/components/common/Tab';
 import TimeTable from '@/components/common/TimeTable';
 import DescriptionCard from '@/components/common/DescriptionCard';
 
 import { activityList, studyProgressMethodList, tabList } from './constants';
-import CountUp from 'react-countup';
+import { TOTAL_STUDY_SESSIONS } from '@/constants/study';
 
-const STUDY_COUNT = 43;
 const TabAbout = () => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [isCSR, setIsCSR] = useState(false);
@@ -39,8 +39,8 @@ const TabAbout = () => {
             </div>
             <span className="text-cotam-red-50 galmuri11-headline-3">
               <CountUp
-                start={isCSR ? 0 : STUDY_COUNT}
-                end={STUDY_COUNT}
+                start={isCSR ? 0 : TOTAL_STUDY_SESSIONS}
+                end={TOTAL_STUDY_SESSIONS}
                 duration={2}
                 separator=","
               />

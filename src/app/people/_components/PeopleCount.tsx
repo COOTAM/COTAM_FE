@@ -2,8 +2,8 @@
 import { useEffect, useState } from 'react';
 import HumanRed from '../../../../public/assets/icons/HumanRed.svg';
 import CountUp from 'react-countup';
+import { STUDY_MEMBERS_COUNT } from '@/constants/study';
 
-const PEOPLE_COUNT = 34;
 const PeopleCount = () => {
   const [isCSR, setIsCSR] = useState(false);
 
@@ -18,7 +18,12 @@ const PeopleCount = () => {
         <span className="text-cotam-blue-40 galmuri11-body-l">PLAYER</span>
       </div>
       <span className="text-cotam-red-50 galmuri11-headline-3">
-        <CountUp start={isCSR ? 0 : PEOPLE_COUNT} end={PEOPLE_COUNT} duration={2} separator="," />
+        <CountUp
+          start={isCSR ? 0 : STUDY_MEMBERS_COUNT}
+          end={STUDY_MEMBERS_COUNT}
+          duration={2}
+          separator=","
+        />
       </span>
     </div>
   );
