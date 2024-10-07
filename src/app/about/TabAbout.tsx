@@ -1,6 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+
+import useIsCSR from '@/hooks/useIsCSR';
 
 import BookRed from '../../../public/assets/icons/BookRed.svg';
 
@@ -14,15 +16,11 @@ import { TOTAL_STUDY_SESSIONS } from '@/constants/study';
 
 const TabAbout = () => {
   const [selectedTab, setSelectedTab] = useState(0);
-  const [isCSR, setIsCSR] = useState(false);
+  const { isCSR } = useIsCSR();
 
   const handleTabChange = (index: number) => {
     setSelectedTab(index);
   };
-
-  useEffect(() => {
-    setIsCSR(true); // 클라이언트에서만 true로 변경
-  }, []);
 
   return (
     <main className="flex w-full flex-col gap-y-10">

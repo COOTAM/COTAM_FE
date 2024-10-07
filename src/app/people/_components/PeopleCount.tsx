@@ -1,15 +1,12 @@
 'use client';
-import { useEffect, useState } from 'react';
+import useIsCSR from '@/hooks/useIsCSR';
+
 import HumanRed from '../../../../public/assets/icons/HumanRed.svg';
 import CountUp from 'react-countup';
 import { STUDY_MEMBERS_COUNT } from '@/constants/study';
 
 const PeopleCount = () => {
-  const [isCSR, setIsCSR] = useState(false);
-
-  useEffect(() => {
-    setIsCSR(true); // 클라이언트에서만 true로 변경
-  }, []);
+  const { isCSR } = useIsCSR();
 
   return (
     <div className="flex items-center justify-between rounded-xl bg-cotam-blue-90 p-5">

@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+
+import useIsCSR from '@/hooks/useIsCSR';
 
 import CountUp from 'react-countup';
 import ImageBox from './ImageBox';
@@ -28,6 +29,7 @@ const AboutCotam = ({ isVisible }: Props) => {
       title: 'SCORE',
       count: TOTAL_STUDY_SESSIONS,
       // 추후 스터디횟수 종합하는 API로 횟수 대체하기
+      // -> #20241007.syjang, 우선 현재 날짜 기준으로 '주' 계산하도록 처리함
       description: `지금까지 ${TOTAL_STUDY_SESSIONS}번의 스터디를 진행했어요!`,
     },
     {
@@ -78,11 +80,7 @@ interface DescriptionBoxProps {
 }
 
 const DescriptionBox = ({ icon, title, count, description, isVisible }: DescriptionBoxProps) => {
-  const [isCSR, setIsCSR] = useState(false);
-
-  useEffect(() => {
-    setIsCSR(true); // 클라이언트에서만 true로 변경
-  }, []);
+  const { isCSR } = useIsCSR();
 
   return (
     <li className="flex w-full flex-col gap-2 rounded-xl bg-cotam-blue-95 p-5">
