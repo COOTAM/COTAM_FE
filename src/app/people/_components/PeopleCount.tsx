@@ -3,7 +3,7 @@ import useIsCSR from '@/hooks/useIsCSR';
 
 import HumanRed from '../../../../public/assets/icons/HumanRed.svg';
 import CountUp from 'react-countup';
-import { STUDY_MEMBERS_COUNT } from '@/constants/study';
+import { STUDY_MEMBERS_COUNT } from '@/constants/studyStats';
 
 const PeopleCount = () => {
   const { isCSR } = useIsCSR();

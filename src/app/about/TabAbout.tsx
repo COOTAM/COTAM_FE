@@ -12,7 +12,7 @@ import TimeTable from '@/components/common/TimeTable';
 import DescriptionCard from '@/components/common/DescriptionCard';
 
 import { activityList, studyProgressMethodList, tabList } from './constants';
-import { TOTAL_STUDY_SESSIONS } from '@/constants/study';
+import { TOTAL_STUDY_SESSIONS } from '@/constants/studyStats';
 
 const TabAbout = () => {
   const [selectedTab, setSelectedTab] = useState(0);

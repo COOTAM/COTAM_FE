@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import FAQList from '@/components/FAQList';
 import Button from '@/components/common/Button';
 import DescriptionCard from '@/components/common/DescriptionCard';
+import { KAKAO_OPEN_CHAT_URL, RECRUITMENT_FORM_URL } from '@/constants/externalLinks';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -30,7 +31,7 @@ export default function Recruit() {
               className="flex-1"
             />
           </div>
-          <a href="https://forms.gle/JhM9t7XzNAS5Agqo6" target="_blank" rel="noopener noreferrer">
+          <a href={RECRUITMENT_FORM_URL} target="_blank" rel="noopener noreferrer">
             <Button className="w-full">코탐 지원하기 ⇗</Button>
           </a>
         </div>
@@ -48,11 +49,7 @@ export default function Recruit() {
       </section>
       <section aria-label="문의하기" className="gap-3 flex-col-center">
         <p className="galmuri11-body-3">궁금한게 더 있으신가요?</p>
-        <a
-          className="w-full"
-          href="https://open.kakao.com/o/srJ7wcje"
-          target="_blank"
-          rel="noopener noreferrer">
+        <a className="w-full" href={KAKAO_OPEN_CHAT_URL} target="_blank" rel="noopener noreferrer">
           <Button variant="blue" className="w-full">
             카카오톡으로 문의하기
           </Button>

@@ -9,7 +9,7 @@ import BorderTop from '@/components/common/BorderTop';
 
 import { ZIndex } from '@/constants/ui';
 import { ROUTES } from '@/constants/routes';
-import { TOTAL_STUDY_SESSIONS, STUDY_MEMBERS_COUNT } from '@/constants/study';
+import { TOTAL_STUDY_SESSIONS, STUDY_MEMBERS_COUNT } from '@/constants/studyStats';
 
 interface DescriptionBoxProps {
   icon: string;
