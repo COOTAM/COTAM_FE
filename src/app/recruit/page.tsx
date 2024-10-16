@@ -3,6 +3,8 @@ import { Metadata } from 'next';
 import FAQList from '@/components/FAQList';
 import Button from '@/components/common/Button';
 import DescriptionCard from '@/components/common/DescriptionCard';
+
+import { recruitConfig } from '@/constants/recruitConfig';
 import { KAKAO_OPEN_CHAT_URL, RECRUITMENT_FORM_URL } from '@/constants/externalLinks';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -21,13 +23,13 @@ export default function Recruit() {
             <DescriptionCard
               variant="lightBlue"
               title="모집 기간"
-              contents="2024.10.08 - 2024.10.13"
+              contents={recruitConfig.recruitmentPeriod}
               className="flex-1"
             />
             <DescriptionCard
               variant="lightBlue"
               title="발표"
-              contents="2024.10.16"
+              contents={recruitConfig.announcementDate}
               className="flex-1"
             />
           </div>
