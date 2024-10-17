@@ -1,5 +1,5 @@
 import HandMetal from '../../../../public/assets/icons/HandMetalRed.svg';
-import WithCotamButton from '../WithCotamButton';
+import WithCotamButton from './WithCotamButton';
 
 const Closing = () => {
   return (
