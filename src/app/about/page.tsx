@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
-import TabAbout from './TabAbout';
+
+import TabAbout from './_components/TabAbout';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
