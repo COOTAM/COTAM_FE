@@ -1,3 +1,5 @@
+'use client';
+
 import CountUp from 'react-countup';
 
 import DescriptionCard from '@/components/common/DescriptionCard';
