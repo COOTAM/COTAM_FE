@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 
 import { ROUTES } from '@/constants/routes';
 
-import CloseX from '../../../public/assets/icons/CloseX.svg';
+import CloseX from '../../public/assets/icons/CloseX.svg';
 
 interface MenuDrawerProps {
   isOpen: boolean;

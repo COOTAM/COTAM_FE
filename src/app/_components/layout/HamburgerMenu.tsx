@@ -2,15 +2,15 @@
 
 import { useReducer } from 'react';
 
-import Hamburger from '../../../public/assets/icons/Hamburger.svg';
-import MenuDrawer from './MenuDrawer';
+import Hamburger from '../../../../public/assets/icons/Hamburger.svg';
+import MenuDrawer from '../../../components/MenuDrawer';
 
 interface MenuButtonProps extends React.HTMLAttributes<HTMLDivElement> {
   pathname: string;
   className?: string;
 }
 
-const MenuButton = ({ pathname, className, ...props }: MenuButtonProps) => {
+const HamburgerMenu = ({ pathname, className, ...props }: MenuButtonProps) => {
   const [isOpen, toggleIsOpen] = useReducer((prev) => !prev, false);
 
   return (
@@ -21,4 +21,4 @@ const MenuButton = ({ pathname, className, ...props }: MenuButtonProps) => {
   );
 };
 
-export default MenuButton;
+export default HamburgerMenu;

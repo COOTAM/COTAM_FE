@@ -3,13 +3,13 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import MenuButton from '@/components/common/MenuButton';
+import HamburgerMenu from '@/app/_components/layout/HamburgerMenu';
 
 import { cn } from '@/lib/utils';
 
 import { ROUTES } from '@/constants/routes';
 
-import Cotam from '../../../public/assets/logo/Cotam.svg';
+import Cotam from '../../../../public/assets/logo/Cotam.svg';
 
 const Header = () => {
   const pathname = usePathname();
@@ -30,7 +30,7 @@ const Header = () => {
       </ul>
 
       {/* 모바일 햄버거 메뉴 (lg 미만에서만 표시) */}
-      <MenuButton pathname={pathname} className="lg:hidden" />
+      <HamburgerMenu pathname={pathname} className="lg:hidden" />
     </header>
   );
 };
