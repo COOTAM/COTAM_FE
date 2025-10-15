@@ -175,7 +175,7 @@ export const playerList: Member[] = [
     position: POSITION.USER,
     job: JOB.APP,
     description: '낭만 Flutter 개발자',
-    imageUrl: null,
+    imageUrl: '/assets/image/people/hareubang.png',
   },
   {
     name: '하딩',
@@ -203,7 +203,7 @@ export const playerList: Member[] = [
     position: POSITION.USER,
     job: JOB.FRONTEND,
     description: '',
-    imageUrl: null,
+    imageUrl: '/assets/image/people/dd.jpg',
   },
   {
     name: 'GLee',
@@ -231,7 +231,7 @@ export const playerList: Member[] = [
     position: POSITION.USER,
     job: JOB.FRONTEND,
     description: '',
-    imageUrl: null,
+    imageUrl: '/assets/image/people/leo.png',
   },
   {
     name: 'Sue',
